@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import NavigationBar from './NavigationBar'
 
 const ViewAllRegistration = () => {
     const [data,changeData]=useState([])
@@ -18,6 +19,7 @@ useEffect(
 )
     return (
         <div>
+            <NavigationBar/>
             <table className="table">
                 <thead>
                     <tr>
@@ -37,15 +39,10 @@ useEffect(
                              <tr>
                                     <th scope="row">{value.regNo}</th>
                                     <td>{value.fullName}</td>
-                                    <td>{value.aadharNumber}</td>
-                                    <td>{value.email}</td>
-                                    <td>{value.phoneNumber}</td>
                                     <td>{value.branch}</td>
                                     <td>{value.sslcMark}</td>
                                     <td>{value.plusTwoMark}</td>
-                                    <td>{value.ugDegree}</td>
                                     <td>{value.ugMark}</td>
-                                    <td>{value.pgDegree}</td>
                                     <td>{value.pgMark}</td>
                                   
                                 </tr>
